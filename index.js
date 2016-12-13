@@ -87,4 +87,4 @@ perform('preact', () => {
 })
 
 report('react');
-report('preact');
+report('preact', true);
