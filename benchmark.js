@@ -24,7 +24,7 @@ const perform = (target, fn) => {
 }
 
 const table = new Table({
-  head: ['Library', 'Average', 'Mean', 'Min', 'Max'],
+  head: ['Library', 'Average', 'Median', 'Min', 'Max'],
 });
 
 const report = (target, log) => {
