@@ -991,6 +991,22 @@ iconv-lite@~0.4.13:
   version "0.4.15"
   resolved "https://registry.yarnpkg.com/iconv-lite/-/iconv-lite-0.4.15.tgz#fe265a218ac6a57cfe854927e9d04c19825eddeb"
 
+inferno-component@^0.7.27:
+  version "0.7.27"
+  resolved "https://registry.yarnpkg.com/inferno-component/-/inferno-component-0.7.27.tgz#9838675e8489cae0c0a7cf1d5815571b29f6e1fa"
+  dependencies:
+    inferno "^0.7.27"
+
+inferno-server@^0.7.27:
+  version "0.7.27"
+  resolved "https://registry.yarnpkg.com/inferno-server/-/inferno-server-0.7.27.tgz#78ddba0cd4ee6818a7d55f72564084c355b55d0b"
+  dependencies:
+    inferno "^0.7.27"
+
+inferno@^0.7.27:
+  version "0.7.27"
+  resolved "https://registry.yarnpkg.com/inferno/-/inferno-0.7.27.tgz#3c3b04f85a072cb8e7165ba5c327252f8c15d5bb"
+
 inflight@^1.0.4:
   version "1.0.6"
   resolved "https://registry.yarnpkg.com/inflight/-/inflight-1.0.6.tgz#49bd6331d7d02d0c09bc910a1075ba8165b56df9"

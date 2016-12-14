@@ -4,7 +4,8 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "start": "node index"
+    "start": "NODE_ENV=production node index",
+    "start:dev": "node index"
   },
   "dependencies": {
     "cli-table": "^0.3.1",
