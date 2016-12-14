@@ -1,32 +1,30 @@
-
-let React = require('react');
-let ReactDOMServer = require('react-dom/server');
+const fs = require('fs');
+const React = require('react');
+const ReactDOMServer = require('react-dom/server');
+const PreactCompat = require('preact-compat');
+const PreactCompatServer = require('preact-compat/server');
 const PreactRenderToString = require('preact-render-to-string');
-const { h } = require('preact');
+const { h, Component } = require('preact');
 const { perform, report, count }  = require('./benchmark');
 
-const PreactApp = require('./preact');
-const ReactApp = require('./react')(React);
+const PreactApp = require('./src/skeleton')(h, Component);
+const ReactApp = require('./src/skeleton')(React.createElement, React.Component);
+const PreactCompatApp = require('./src/skeleton')(PreactCompat.createElement, PreactCompat.Component);
 
 perform('react', () => {
-  ReactDOMServer.renderToString(
+  return ReactDOMServer.renderToString(
     React.createElement(ReactApp)
   );
 });
 
-React = require('preact-compat');
-ReactDOMServer = require('preact-compat/server');
-
-const PreactCompatApp = require('./react')(React);
-
 perform('preact-compat', () => {
-  ReactDOMServer.renderToString(
-    React.createElement(PreactCompatApp)
+  return PreactCompatServer.renderToString(
+    PreactCompat.createElement(PreactCompatApp)
   );
 });
 
 perform('preact', () => {
-  PreactRenderToString(
+  return PreactRenderToString(
     h(PreactApp)
   );
 });
