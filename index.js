@@ -1,4 +1,8 @@
 let React = require('react')
+const ReactProd = require('react/dist/react.min')
+const Module = module.constructor;
+Module._cache[require.resolve('react')] = ReactProd
+React = ReactProd
 let ReactDOMServer = require('react-dom/server')
 const { perform, report }  = require('./benchmark')
 
@@ -77,7 +81,7 @@ perform('react', () => {
   );
 })
 
-React = require('preact-compat')
+React = require('preact-compat/dist/preact-compat.min')
 ReactDOMServer = require('preact-compat/server')
 
 perform('preact', () => {
