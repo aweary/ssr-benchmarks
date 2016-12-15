@@ -6,6 +6,7 @@ const PreactCompatServer = require('preact-compat/server');
 const PreactRenderToString = require('preact-render-to-string');
 const { createVNode } = require('inferno');
 const InfernoRenderToString = require('inferno-server');
+const InfernoCompat = require('inferno-compat');
 const { h, Component } = require('preact');
 const { perform, report, count }  = require('./benchmark');
 
@@ -13,6 +14,7 @@ const PreactApp = require('./src/skeleton')(h, Component);
 const ReactApp = require('./src/skeleton')(React.createElement, React.Component);
 const PreactCompatApp = require('./src/skeleton')(PreactCompat.createElement, PreactCompat.Component);
 const InfernoApp = require('./src/inferno-skeleton')();
+const InfernoCompatApp = require('./src/skeleton')(InfernoCompat.createElement, InfernoCompat.Component);
 
 perform('react', () => {
   return ReactDOMServer.renderToString(
@@ -38,7 +40,14 @@ perform('inferno', () => {
   );
 });
 
+perform('inferno-compat', () => {
+  return InfernoRenderToString.renderToString(
+    InfernoCompat.createElement(InfernoCompatApp)
+  );
+});
+
 report('react');
 report('preact');
 report('preact-compat');
-report('inferno', true);
+report('inferno');
+report('inferno-compat', true);
