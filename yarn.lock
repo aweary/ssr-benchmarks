@@ -991,21 +991,33 @@ iconv-lite@~0.4.13:
   version "0.4.15"
   resolved "https://registry.yarnpkg.com/iconv-lite/-/iconv-lite-0.4.15.tgz#fe265a218ac6a57cfe854927e9d04c19825eddeb"
 
-inferno-component@^0.7.27:
-  version "0.7.27"
-  resolved "https://registry.yarnpkg.com/inferno-component/-/inferno-component-0.7.27.tgz#9838675e8489cae0c0a7cf1d5815571b29f6e1fa"
+inferno-compat@beta34:
+  version "1.0.0-beta34"
+  resolved "https://registry.yarnpkg.com/inferno-compat/-/inferno-compat-1.0.0-beta34.tgz#7fa4e4ee3c019b18a7549c1125bd571d43bd5284"
   dependencies:
-    inferno "^0.7.27"
+    inferno "1.0.0-beta34"
+    inferno-transition-group "1.1.0"
+    rc-css-transition-group "2.1.4"
 
-inferno-server@^0.7.27:
-  version "0.7.27"
-  resolved "https://registry.yarnpkg.com/inferno-server/-/inferno-server-0.7.27.tgz#78ddba0cd4ee6818a7d55f72564084c355b55d0b"
+inferno-component@1.0.0-beta34:
+  version "1.0.0-beta34"
+  resolved "https://registry.yarnpkg.com/inferno-component/-/inferno-component-1.0.0-beta34.tgz#8014970bd23a81a55ce0de8a2408820be2b873a1"
   dependencies:
-    inferno "^0.7.27"
+    inferno "1.0.0-beta34"
 
-inferno@^0.7.27:
-  version "0.7.27"
-  resolved "https://registry.yarnpkg.com/inferno/-/inferno-0.7.27.tgz#3c3b04f85a072cb8e7165ba5c327252f8c15d5bb"
+inferno-server@1.0.0-beta34:
+  version "1.0.0-beta34"
+  resolved "https://registry.yarnpkg.com/inferno-server/-/inferno-server-1.0.0-beta34.tgz#32726b7d632f32459685912c733927d4d0057e3a"
+  dependencies:
+    inferno "1.0.0-beta34"
+
+inferno-transition-group@1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/inferno-transition-group/-/inferno-transition-group-1.1.0.tgz#7f7cb800530e7b3d1b6d3867c87a3d6ec50aa003"
+
+inferno@1.0.0-beta34:
+  version "1.0.0-beta34"
+  resolved "https://registry.yarnpkg.com/inferno/-/inferno-1.0.0-beta34.tgz#337aeed5a7be642ac9ff07994efbec607fd7d722"
 
 inflight@^1.0.4:
   version "1.0.6"
@@ -1424,6 +1436,10 @@ randomatic@^1.1.3:
   dependencies:
     is-number "^2.0.2"
     kind-of "^3.0.2"
+
+rc-css-transition-group@2.1.4:
+  version "2.1.4"
+  resolved "https://registry.yarnpkg.com/rc-css-transition-group/-/rc-css-transition-group-2.1.4.tgz#3bb6cbf33033b9b452065a98fb24efe18405fc82"
 
 rc@~1.1.6:
   version "1.1.6"
