@@ -1,6 +1,6 @@
-<div class="title" onClick="{{noop()}}">
+<div class="title" on:click="{{noop()}}">
   <h1>{{title}}</h1>
-<div>
+</div>
 
 <script>
   export default {
@@ -9,7 +9,7 @@
         title: '',
       };
     },
-    methods() {
+    methods: {
       noop: function noop() {},
     },
   }

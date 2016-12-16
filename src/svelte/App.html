@@ -15,11 +15,24 @@
 </div>
 
 <script>
+  import ItemSectionGroupWrapper from './ItemSectionGroupWrapper.html';
+  import ItemSectionGroup from './ItemSectionGroup.html';
+  import ItemSection from './ItemSection.html';
+  import Item from './Item.html';
+  import RichItem from './RichItem.html';
+
   export default {
     data() {
       return {
         items: [],
       };
-    }
+    },
+    components: {
+      ItemSectionGroupWrapper,
+      ItemSectionGroup,
+      ItemSection,
+      Item,
+      RichItem,
+    },
   }
 </script>

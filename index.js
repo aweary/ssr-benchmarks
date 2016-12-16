@@ -48,9 +48,7 @@ const SvelteApp = require('./src/svelte-skeleton')();
 // });
 
 perform('svelte', () => {
-  const html = SvelteApp.component.render(SvelteApp.data);
-
-  return html;
+  return SvelteApp.component.render(SvelteApp.data);
 });
 
 // report('react');
