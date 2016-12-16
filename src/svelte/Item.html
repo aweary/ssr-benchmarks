@@ -1,0 +1,30 @@
+<div class="item">
+    <TitleWrapper title={{title}}/>
+    <p class="item-content">{{content}}</p>
+    <Image src={{img}}/>
+    <ul>
+        {{#each todos as i}}
+            <li id={{'todo-' + i}}>{{i}}</li>
+        {{/each}}
+    </ul>
+</div>
+
+<script>
+    import TitleWrapper from './TitleWrapper.html';
+    import Image from './Image.html';
+
+    export default {
+        data() {
+            return {
+                todos: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9],
+                img: '',
+                title: '',
+                content: null,
+            };
+        },
+        components: {
+            TitleWrapper,
+            Image,
+        }
+    }
+</script>

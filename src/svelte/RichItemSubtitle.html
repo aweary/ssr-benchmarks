@@ -1,0 +1,19 @@
+<div style="font-size: 20" id={{id}}>
+  <RichItemSubTitleWrapper>{{children}}</RichItemSubTitleWrapper>
+</div>
+
+<script>
+  import RichItemSubTitleWrapper from './RichItemSubTitleWrapper.html';
+
+  export default {
+    data() {
+      return {
+        id: 0,
+        children: null,
+      };
+    },
+    components: {
+      RichItemSubTitleWrapper,
+    },
+  }
+</script>

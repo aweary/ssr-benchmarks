@@ -1,0 +1,24 @@
+<div class="item-{{title}}">
+  <div id="title{{Math.random()}}">
+    <h2>{{title}}</h2>
+    <RichItemSubtitle id="{{Math.random()}}">Subtitle - {{Math.random()}}</RichItemSubtitle>
+    <p id="p-{{title}}">{{content}}</p>
+  </div>
+</div>
+
+<script>
+  import RichItemSubtitle from './RichItemSubtitle.html';
+
+  export default {
+    data() {
+      return {
+        title: '',
+        content: '',
+        img: '',
+      };
+    },
+    components: {
+      RichItemSubtitle,
+    }
+  }
+</script>

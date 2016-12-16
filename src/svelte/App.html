@@ -1,0 +1,25 @@
+<div class="app">
+  {{#each items as item, i}}
+    <ItemSectionGroupWrapper>
+      <ItemSectionGroup>
+        <ItemSection id="{{i}}">
+          {{#if i % 2 === 0}}
+            <Item item={{item}} />
+          {{else}}
+            <RichItem item={{item}} />
+          {{/if}}
+        </ItemSection>
+      </ItemSectionGroup>
+    </ItemSectionGroupWrapper>
+  {{/each}}
+</div>
+
+<script>
+  export default {
+    data() {
+      return {
+        items: [],
+      };
+    }
+  }
+</script>

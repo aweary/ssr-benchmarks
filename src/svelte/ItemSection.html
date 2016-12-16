@@ -1,0 +1,26 @@
+<div>
+  {{#if showEven}}
+  <h2>This item section is even</h2>
+  {{/if}}
+  <div id="item-section{{id}}" style="font-weight: 300; margin: 10px 20px;">
+    {{children}}
+  </div>
+  <ItemSectionDescription />
+</div>
+
+<script>
+  export default {
+    data() {
+      return {
+        id: -1,
+        even: false,
+        children: null,
+      };
+    },
+    onrender() {
+      const even = this.get('id') % 2 === 0;
+
+      this.set({ even, showEven: even });
+    }
+  };
+</script>
