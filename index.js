@@ -55,5 +55,5 @@ report('react');
 report('preact');
 report('preact-compat');
 report('inferno');
-report('inferno-compat', true);
-report('svelte');
+report('inferno-compat');
+report('svelte', true);
