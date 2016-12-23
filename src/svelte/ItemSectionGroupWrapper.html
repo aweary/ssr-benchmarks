@@ -1,6 +1,8 @@
 <div style="background-color: lightblue; border: 1px solid #FF44AA;">
     <h2 class="wrapper-tile">{{Math.random()}}wrapper title</h2>
-    <p style="font-size: 15px; color: red;"><ItemSectionGroup children="{{children}}"/></p>
+    <p style="font-size: 15px; color: red;">
+      <ItemSectionGroup>{{yield}}</ItemSectionGroup>
+    </p>
 </div>
 
 <script>
@@ -10,7 +12,6 @@
     data() {
       return {
         content: '',
-        children: '',
       };
     },
     components: {

@@ -1,10 +1,10 @@
 <div class="item">
-    <TitleWrapper title={{title}}/>
+    <TitleWrapper title="{{title}}" />
     <p class="item-content">{{content}}</p>
-    <Image src={{img}}/>
+    <Image src="{{img}}" />
     <ul>
         {{#each todos as i}}
-            <li id={{'todo-' + i}}>{{i}}</li>
+            <li id="todo-{{i}}">{{i}}</li>
         {{/each}}
     </ul>
 </div>

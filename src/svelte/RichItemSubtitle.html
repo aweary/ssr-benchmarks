@@ -1,5 +1,5 @@
-<div style="font-size: 20" id={{id}}>
-  <RichItemSubTitleWrapper>{{children}}</RichItemSubTitleWrapper>
+<div style="font-size: 20" id="{{id}}">
+  <RichItemSubTitleWrapper>{{yield}}</RichItemSubTitleWrapper>
 </div>
 
 <script>
@@ -9,7 +9,6 @@
     data() {
       return {
         id: 0,
-        children: null,
       };
     },
     components: {

@@ -3,7 +3,7 @@
   <h2>This item section is even</h2>
   {{/if}}
   <div id="item-section{{id}}" style="font-weight: 300; margin: 10px 20px;">
-    {{children}}
+    {{yield}}
   </div>
   <ItemSectionDescription />
 </div>
@@ -14,7 +14,6 @@
       return {
         id: -1,
         even: false,
-        children: null,
       };
     },
     onrender() {

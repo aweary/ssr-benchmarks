@@ -1,11 +1,10 @@
-<div class="really-long-and-stupid-class-name">{{children}}</div>
+<div class="really-long-and-stupid-class-name">{{yield}}</div>
 
 <script>
   export default {
     data() {
       return {
         aboutToMount: false,
-        children: null,
       };
     },
     onrender() {
