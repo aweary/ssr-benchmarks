@@ -17,43 +17,43 @@ const InfernoApp = require('./src/inferno-skeleton')();
 const InfernoCompatApp = require('./src/skeleton')(InfernoCompat.createElement, InfernoCompat.Component);
 const SvelteApp = require('./src/svelte-skeleton')();
 
-// perform('react', () => {
-//   return ReactDOMServer.renderToString(
-//     React.createElement(ReactApp)
-//   );
-// });
+perform('react', () => {
+  return ReactDOMServer.renderToString(
+    React.createElement(ReactApp)
+  );
+});
 
-// perform('preact-compat', () => {
-//   return PreactCompatServer.renderToString(
-//     PreactCompat.createElement(PreactCompatApp)
-//   );
-// });
+perform('preact-compat', () => {
+  return PreactCompatServer.renderToString(
+    PreactCompat.createElement(PreactCompatApp)
+  );
+});
 
-// perform('preact', () => {
-//   return PreactRenderToString(
-//     h(PreactApp)
-//   );
-// });
+perform('preact', () => {
+  return PreactRenderToString(
+    h(PreactApp)
+  );
+});
 
-// perform('inferno', () => {
-//   return InfernoRenderToString.renderToString(
-//     createVNode(4, InfernoApp, null, null, null, null, true)
-//   );
-// });
+perform('inferno', () => {
+  return InfernoRenderToString.renderToString(
+    createVNode(4, InfernoApp, null, null, null, null, true)
+  );
+});
 
-// perform('inferno-compat', () => {
-//   return InfernoRenderToString.renderToString(
-//     InfernoCompat.createElement(InfernoCompatApp)
-//   );
-// });
+perform('inferno-compat', () => {
+  return InfernoRenderToString.renderToString(
+    InfernoCompat.createElement(InfernoCompatApp)
+  );
+});
 
 perform('svelte', () => {
   return SvelteApp.component.render(SvelteApp.data);
 });
 
-// report('react');
-// report('preact');
-// report('preact-compat');
-// report('inferno');
-// report('inferno-compat', true);
+report('react');
+report('preact');
+report('preact-compat');
+report('inferno');
+report('inferno-compat', true);
 report('svelte');
