@@ -9,6 +9,8 @@
 </div>
 
 <script>
+  import ItemSectionDescription from './ItemSectionDescription.html';
+
   export default {
     data() {
       return {
@@ -20,6 +22,9 @@
       const even = this.get('id') % 2 === 0;
 
       this.set({ even, showEven: even });
+    },
+    components: {
+      ItemSectionDescription,
     }
   };
 </script>

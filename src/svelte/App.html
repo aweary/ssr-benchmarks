@@ -4,9 +4,9 @@
       <ItemSectionGroup>
         <ItemSection id="{{i}}">
           {{#if i % 2 === 0}}
-            <Item item="{{item}}" />
+            <Item img="{{item.img}}" title="{{item.title}}" content="{{item.content}}" />
           {{else}}
-            <RichItem item="{{item}}" />
+            <RichItem img="{{item.img}}" title="{{item.title}}" content="{{item.content}}" />
           {{/if}}
         </ItemSection>
       </ItemSectionGroup>
