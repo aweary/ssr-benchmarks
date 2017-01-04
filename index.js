@@ -15,6 +15,7 @@ const ReactApp = require('./src/skeleton')(React.createElement, React.Component)
 const PreactCompatApp = require('./src/skeleton')(PreactCompat.createElement, PreactCompat.Component);
 const InfernoApp = require('./src/inferno-skeleton')();
 const InfernoCompatApp = require('./src/skeleton')(InfernoCompat.createElement, InfernoCompat.Component);
+const SvelteApp = require('./src/svelte-skeleton')();
 
 perform('react', () => {
   return ReactDOMServer.renderToString(
@@ -46,8 +47,13 @@ perform('inferno-compat', () => {
   );
 });
 
+perform('svelte', () => {
+  return SvelteApp.component.render(SvelteApp.data);
+});
+
 report('react');
 report('preact');
 report('preact-compat');
 report('inferno');
-report('inferno-compat', true);
+report('inferno-compat');
+report('svelte', true);

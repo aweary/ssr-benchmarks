@@ -1,0 +1,14 @@
+<div class="really-long-and-stupid-class-name">{{yield}}</div>
+
+<script>
+  export default {
+    data() {
+      return {
+        aboutToMount: false,
+      };
+    },
+    onrender() {
+      this.set({ aboutToMount: true });
+    },
+  }
+</script>

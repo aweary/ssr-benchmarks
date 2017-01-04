@@ -1,0 +1,38 @@
+<div class="app">
+  {{#each items as item, i}}
+    <ItemSectionGroupWrapper>
+      <ItemSectionGroup>
+        <ItemSection id="{{i}}">
+          {{#if i % 2 === 0}}
+            <Item img="{{item.img}}" title="{{item.title}}" content="{{item.content}}" />
+          {{else}}
+            <RichItem img="{{item.img}}" title="{{item.title}}" content="{{item.content}}" />
+          {{/if}}
+        </ItemSection>
+      </ItemSectionGroup>
+    </ItemSectionGroupWrapper>
+  {{/each}}
+</div>
+
+<script>
+  import ItemSectionGroupWrapper from './ItemSectionGroupWrapper.html';
+  import ItemSectionGroup from './ItemSectionGroup.html';
+  import ItemSection from './ItemSection.html';
+  import Item from './Item.html';
+  import RichItem from './RichItem.html';
+
+  export default {
+    data() {
+      return {
+        items: [],
+      };
+    },
+    components: {
+      ItemSectionGroupWrapper,
+      ItemSectionGroup,
+      ItemSection,
+      Item,
+      RichItem,
+    },
+  }
+</script>

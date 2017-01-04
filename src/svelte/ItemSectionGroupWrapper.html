@@ -1,0 +1,21 @@
+<div style="background-color: lightblue; border: 1px solid #FF44AA;">
+    <h2 class="wrapper-tile">{{Math.random()}}wrapper title</h2>
+    <p style="font-size: 15px; color: red;">
+      <ItemSectionGroup>{{yield}}</ItemSectionGroup>
+    </p>
+</div>
+
+<script>
+  import ItemSectionGroup from './ItemSectionGroup.html';
+
+  export default {
+    data() {
+      return {
+        content: '',
+      };
+    },
+    components: {
+      ItemSectionGroup,
+    }
+  };
+</script>

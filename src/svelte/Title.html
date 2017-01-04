@@ -1,0 +1,16 @@
+<div class="title" on:click="noop()">
+  <h1>{{title}}</h1>
+</div>
+
+<script>
+  export default {
+    data() {
+      return {
+        title: '',
+      };
+    },
+    methods: {
+      noop: function noop() {},
+    },
+  }
+</script>
