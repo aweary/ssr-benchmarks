@@ -1559,9 +1559,9 @@ preact-compat@^3.10.0:
     proptypes "^0.14.3"
     standalone-react-addons-pure-render-mixin "^0.1.1"
 
-preact-render-to-string@^3.2.1, preact-render-to-string@^3.3.0:
-  version "3.3.0"
-  resolved "https://registry.yarnpkg.com/preact-render-to-string/-/preact-render-to-string-3.3.0.tgz#e7cf3815fe590d8ddc21e57c996f5c5657ca57d5"
+preact-render-to-string@^3.2.1, preact-render-to-string@^3.4.1:
+  version "3.4.1"
+  resolved "https://registry.yarnpkg.com/preact-render-to-string/-/preact-render-to-string-3.4.1.tgz#944476ea3c5be71436f57248e3bbc7a11720a0d1"
   dependencies:
     pretty-format "^3.5.1"
 
