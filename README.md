@@ -18,6 +18,7 @@ Runs SSR benchmarks for:
 
 ```
 yarn install
+node_modules/.bin/rollem
 yarn start
 ```
 
